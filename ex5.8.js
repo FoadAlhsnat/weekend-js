@@ -1,14 +1,8 @@
-function shortestwords(string){
-  let arr=[];
+function longestwords(string){
   let long=string.split(" ").reduce((acc,curr)=>{
       return curr.length > acc.length ? curr : acc;
-  },string.split(" ")[0]).length;
-  string.split(' ').map((el)=>{
-  if(el.length===long) 
-    arr.push(el); 
-})
-return arr;
-
+  }).length;
+  return string.split(' ').filter((el)=>el.length===long)
 }
 
-console.log(shortestwords('foad ssss tt  ff dfsd'))
+console.log(longestwords('foad ssss tt  ff dfsd'))
