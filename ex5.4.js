@@ -1,11 +1,11 @@
 function WeirdCase(string){
-  var obj=[];
+  var str=[];
   string.split("").forEach((element,i) => {
     if(i%2==0){
-      return obj.push(element.toUpperCase());
+      return str.push(element.toUpperCase());
     }
-    return obj.push(element.toLowerCase());
+    return str.push(element.toLowerCase());
   });
-  console.log(obj.join(""))
+  return str.join('')
 }
 console.log(WeirdCase("Weird string case"));
